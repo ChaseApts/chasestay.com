@@ -1,814 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chase Stays | Short-Term Serviced Apartments in London & Birmingham</title>
-  <meta name="description" content="Beautifully furnished short-stay apartments in Baker Street, London and Birmingham city centre. Book direct and save. Ideal for business, leisure and relocation." />
-  <meta name="keywords" content="short stay London, serviced apartments Baker Street, short term rental Birmingham, Gloucester Place apartments, Rotunda Birmingham, The Orion Birmingham, furnished flats London NW1" />
-  <meta property="og:title" content="Chase Stays | Serviced Apartments London & Birmingham" />
-  <meta property="og:description" content="Premium short-stay apartments in Baker Street London and Birmingham city centre. Book direct for best rates." />
-  <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://www.chasestay.com/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LodgingBusiness","name":"Chase Stays","description":"Premium short-stay serviced apartments in Baker Street London and Birmingham city centre","url":"https://www.chasestay.com","priceRange":"££"}</script>
-  <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--cream:#F7F4EF;--deep:#1A1A18;--gold:#B8955A;--gold-light:#E8D9C0;--muted:#6B6860;--border:rgba(26,26,24,0.1);--display:'Cormorant Garamond',Georgia,serif;--body:'Inter',system-ui,sans-serif}
-    html{scroll-behavior:smooth}
-    body{font-family:var(--body);background:var(--cream);color:var(--deep);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-    nav{position:sticky;top:0;z-index:100;background:var(--cream);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px}
-    .nav-logo{font-family:var(--display);font-size:22px;font-weight:600;letter-spacing:.02em;color:var(--deep);text-decoration:none}
-    .nav-logo span{color:var(--gold)}
-    .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-    .nav-links a{font-size:13px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
-    .nav-links a:hover{color:var(--deep)}
-    .nav-cta{background:var(--deep)!important;color:var(--cream)!important;padding:9px 20px;border-radius:2px;font-size:12px!important;letter-spacing:.1em!important}
-    .nav-cta:hover{background:var(--gold)!important;color:var(--deep)!important}
-    .hero{min-height:88vh;display:grid;grid-template-columns:1fr 1fr;align-items:center}
-    .hero-text{padding:80px 60px 80px 80px}
-    .hero-eyebrow{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-    .hero-headline{font-family:var(--display);font-size:clamp(42px,5vw,68px);font-weight:500;line-height:1.08;letter-spacing:-.01em;margin-bottom:24px}
-    .hero-headline em{font-style:italic;color:var(--gold)}
-    .hero-sub{font-size:15px;font-weight:300;color:var(--muted);max-width:400px;line-height:1.7;margin-bottom:40px}
-    .hero-actions{display:flex;gap:16px;align-items:center}
-    .btn-primary{background:var(--deep);color:var(--cream);padding:14px 28px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:none;border-radius:2px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
-    .btn-primary:hover{background:var(--gold);color:var(--deep)}
-    .btn-ghost{font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.06em;border-bottom:1px solid var(--border);padding-bottom:2px;transition:color .2s,border-color .2s}
-    .btn-ghost:hover{color:var(--deep);border-color:var(--deep)}
-    .hero-stats{display:flex;gap:40px;margin-top:48px;padding-top:40px;border-top:1px solid var(--border)}
-    .hero-stat-num{font-family:var(--display);font-size:32px;font-weight:500;line-height:1}
-    .hero-stat-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-    .hero-visual{height:100%;min-height:88vh;overflow:hidden;background:#1A1A18;position:relative}
-    .hero-img{width:100%;height:100%;object-fit:cover;opacity:.75;display:block}
-    .hero-img-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:40px;background:linear-gradient(to top,rgba(26,26,24,.85) 0%,transparent 60%)}
-    .hero-pin-cards{display:flex;flex-direction:column;gap:12px}
-    .location-pin-card{background:rgba(247,244,239,.12);backdrop-filter:blur(8px);border:1px solid rgba(247,244,239,.2);border-radius:4px;padding:16px 20px;display:flex;align-items:center;gap:14px}
-    .pin-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
-    .pin-dot.london{background:var(--gold)}
-    .pin-dot.birmingham{background:white}
-    .pin-name{font-family:var(--display);font-size:16px;font-weight:500;color:white}
-    .pin-detail{font-size:11px;color:rgba(247,244,239,.6);margin-top:2px}
-    .pin-count{margin-left:auto;font-size:11px;font-weight:500;letter-spacing:.08em;background:rgba(184,149,90,.25);color:var(--gold);padding:3px 9px;border-radius:2px;white-space:nowrap}
-    .search-section{background:var(--deep);padding:32px 80px}
-    .search-bar{display:flex;align-items:center;background:white;border-radius:3px;overflow:hidden;max-width:900px;margin:0 auto}
-    .search-field{flex:1;padding:18px 24px;border:none;font-family:var(--body);font-size:14px;color:var(--deep);outline:none;border-right:1px solid var(--border)}
-    .search-field::placeholder{color:var(--muted)}
-    .search-btn{background:var(--gold);color:var(--deep);border:none;padding:18px 32px;font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:var(--body);white-space:nowrap;transition:background .2s}
-    .search-btn:hover{background:#a07d44;color:white}
-    .section-label{font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-    .section-title{font-family:var(--display);font-size:clamp(28px,3vw,40px);font-weight:500;line-height:1.15}
-    .locations-section{padding:100px 80px}
-    .locations-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px}
-    .location-tabs{display:flex;gap:8px}
-    .tab-btn{font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:8px 20px;border:1px solid var(--border);border-radius:2px;background:transparent;cursor:pointer;font-family:var(--body);color:var(--muted);transition:all .2s}
-    .tab-btn.active,.tab-btn:hover{background:var(--deep);color:var(--cream);border-color:var(--deep)}
-    .properties-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .property-card{background:white;border-radius:3px;overflow:hidden;transition:transform .25s;cursor:pointer}
-    .property-card:hover{transform:translateY(-4px)}
-    .property-card.featured{grid-column:span 2}
-    .card-gallery{position:relative;overflow:hidden}
-    .gallery-slides{display:flex;transition:transform .4s ease}
-    .gallery-slide{min-width:100%;overflow:hidden;flex-shrink:0}
-    .gallery-slide img{width:100%;height:100%;object-fit:cover;display:block}
-    .gallery-slide.ph{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;background:var(--gold-light)}
-    .slide-h{height:240px}
-    .slide-h-lg{height:340px}
-    .g-prev,.g-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(26,26,24,.55);color:white;border:none;width:34px;height:34px;border-radius:2px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;z-index:5;transition:background .2s}
-    .g-prev{left:8px}.g-next{right:8px}
-    .g-prev:hover,.g-next:hover{background:var(--gold)}
-    .g-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px}
-    .g-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;border:none;transition:background .2s}
-    .g-dot.active{background:white}
-    .card-body{padding:22px}
-    .card-location{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
-    .card-name{font-family:var(--display);font-size:20px;font-weight:500;margin-bottom:8px;line-height:1.2}
-    .card-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}
-    .card-meta{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border)}
-    .card-badges{display:flex;gap:5px;flex-wrap:wrap}
-    .badge{font-size:11px;padding:3px 8px;background:var(--cream);border-radius:2px;color:var(--muted)}
-    .card-book{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--deep);text-decoration:none;border-bottom:1px solid var(--deep);padding-bottom:1px;transition:color .2s;white-space:nowrap;margin-left:10px}
-    .card-book:hover{color:var(--gold);border-color:var(--gold)}
-    .prop-feature{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
-    .feat-gallery{position:relative;overflow:hidden}
-    .feat-slides{display:flex;height:100%;transition:transform .4s ease}
-    .feat-slide{min-width:100%;height:100%;flex-shrink:0}
-    .feat-slide img{width:100%;height:100%;object-fit:cover;display:block}
-    .feat-nav{position:absolute;bottom:20px;left:20px;display:flex;gap:7px;z-index:5}
-    .feat-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;border:none;transition:background .2s}
-    .feat-dot.active{background:var(--gold)}
-    .feat-prev,.feat-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);color:white;border:none;width:40px;height:40px;border-radius:2px;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;z-index:5;transition:background .2s}
-    .feat-prev{left:12px}.feat-next{right:12px}
-    .feat-prev:hover,.feat-next:hover{background:var(--gold);color:var(--deep)}
-    .feat-content{padding:56px 60px;display:flex;flex-direction:column;justify-content:center}
-    .feat-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
-    .feat-title{font-family:var(--display);font-size:clamp(26px,3vw,40px);font-weight:500;line-height:1.15;margin-bottom:18px}
-    .feat-title em{font-style:italic;color:var(--gold)}
-    .feat-desc{font-size:14px;font-weight:300;line-height:1.75;margin-bottom:28px}
-    .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:32px}
-    .feat-item{display:flex;align-items:flex-start;gap:10px}
-    .feat-icon{color:var(--gold);font-size:13px;margin-top:3px;flex-shrink:0}
-    .feat-text strong{display:block;font-size:13px;font-weight:500;margin-bottom:2px}
-    .feat-text span{font-size:12px;color:var(--muted);line-height:1.4}
-    .rotunda-section{background:var(--deep);color:var(--cream)}
-    .rotunda-section .feat-desc{color:rgba(247,244,239,.7)}
-    .rotunda-section .feat-text span{color:rgba(247,244,239,.5)}
-    .orion-section{background:var(--cream)}
-    .why-section{background:var(--deep);color:var(--cream);padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-    .why-title{font-family:var(--display);font-size:clamp(32px,3.5vw,48px);font-weight:500;line-height:1.15;margin-bottom:24px}
-    .why-title em{color:var(--gold);font-style:italic}
-    .why-sub{font-size:14px;font-weight:300;color:rgba(247,244,239,.6);line-height:1.7;margin-bottom:36px}
-    .why-benefits{display:flex;flex-direction:column;gap:26px}
-    .benefit{display:flex;gap:20px;align-items:flex-start}
-    .benefit-num{font-family:var(--display);font-size:28px;font-weight:400;color:var(--gold);line-height:1;min-width:32px}
-    .benefit-title{font-size:14px;font-weight:500;margin-bottom:3px}
-    .benefit-desc{font-size:13px;color:rgba(247,244,239,.55);line-height:1.6}
-    .ai-section{padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-    .ai-chat-window{background:white;border-radius:8px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,.06)}
-    .ai-chat-header{background:var(--deep);padding:16px 20px;display:flex;align-items:center;gap:12px}
-    .ai-avatar{width:32px;height:32px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:14px}
-    .ai-name{font-size:13px;font-weight:500;color:var(--cream)}
-    .ai-status{font-size:11px;color:rgba(247,244,239,.5)}
-    .ai-online{width:7px;height:7px;border-radius:50%;background:#4CAF82;margin-left:auto}
-    .ai-messages{padding:24px;display:flex;flex-direction:column;gap:14px;min-height:220px;max-height:300px;overflow-y:auto}
-    .msg{max-width:82%;padding:11px 15px;border-radius:3px;font-size:13px;line-height:1.55}
-    .msg-ai{background:var(--cream);color:var(--deep);align-self:flex-start;border-bottom-left-radius:0}
-    .msg-user{background:var(--deep);color:var(--cream);align-self:flex-end;border-bottom-right-radius:0}
-    .ai-chips{padding:0 20px 16px;display:flex;flex-wrap:wrap;gap:7px}
-    .ai-chip{font-size:12px;padding:6px 13px;border:1px solid var(--border);border-radius:2px;cursor:pointer;background:transparent;font-family:var(--body);color:var(--muted);transition:all .2s}
-    .ai-chip:hover{border-color:var(--gold);color:var(--gold)}
-    .ai-input-row{border-top:1px solid var(--border);display:flex;padding:12px 16px;gap:10px;align-items:center}
-    .ai-input{flex:1;border:none;outline:none;font-family:var(--body);font-size:13px;color:var(--deep);background:transparent}
-    .ai-input::placeholder{color:var(--muted)}
-    .ai-send{width:32px;height:32px;background:var(--deep);border:none;border-radius:2px;cursor:pointer;color:white;font-size:16px;transition:background .2s;display:flex;align-items:center;justify-content:center}
-    .ai-send:hover{background:var(--gold);color:var(--deep)}
-    .ical-section{background:var(--gold-light);padding:56px 80px;display:flex;align-items:center;gap:56px}
-    .ical-icon{font-size:44px;flex-shrink:0}
-    .ical-title{font-family:var(--display);font-size:22px;font-weight:500;margin-bottom:7px}
-    .ical-desc{font-size:14px;color:var(--muted);max-width:500px;line-height:1.6}
-    footer{background:var(--deep);color:rgba(247,244,239,.6);padding:60px 80px 40px}
-    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid rgba(247,244,239,.1)}
-    .footer-logo{font-family:var(--display);font-size:26px;font-weight:500;color:var(--cream);margin-bottom:12px}
-    .footer-logo span{color:var(--gold)}
-    .footer-tagline{font-size:13px;line-height:1.7;margin-bottom:20px}
-    .footer-heading{font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);margin-bottom:14px}
-    .footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
-    .footer-links a{font-size:13px;color:rgba(247,244,239,.6);text-decoration:none;transition:color .2s}
-    .footer-links a:hover{color:var(--gold)}
-    .footer-bottom{display:flex;justify-content:space-between;align-items:center;font-size:12px}
-    .footer-seo{font-size:11px;color:rgba(247,244,239,.18);line-height:1.6;margin-top:20px}
-    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:center;justify-content:center;padding:20px}
-    .modal-overlay.open{display:flex}
-    .modal{background:white;max-width:960px;width:100%;border-radius:4px;overflow:hidden;max-height:90vh;overflow-y:auto;position:relative}
-    .modal-gallery{display:grid;grid-template-columns:2fr 1fr;height:460px;gap:3px}
-    .modal-main{height:100%;overflow:hidden}
-    .modal-main img{width:100%;height:100%;object-fit:cover;display:block}
-    .modal-main .ph{background:#DDD4C4;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:16px;color:var(--muted)}
-    .modal-thumbs{display:grid;grid-template-rows:repeat(3,1fr);gap:3px;overflow:hidden}
-    .modal-thumb{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;transition:opacity .2s}
-    .modal-thumb:hover{opacity:.82}
-    .modal-body{padding:36px 40px}
-    .modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.9);border:none;width:36px;height:36px;border-radius:50%;font-size:18px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center}
-    .modal-location{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
-    .modal-title{font-family:var(--display);font-size:30px;font-weight:500;margin-bottom:14px}
-    .modal-desc{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:24px}
-    .modal-amenities{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:28px}
-    .amenity{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--deep)}
-    .amenity::before{content:"✓";color:var(--gold);font-weight:700}
-    .modal-cta{background:var(--deep);color:var(--cream);padding:15px 28px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border:none;border-radius:2px;cursor:pointer;width:100%;transition:background .2s;text-decoration:none;display:block;text-align:center}
-    .modal-cta:hover{background:var(--gold);color:var(--deep)}
-    @media(max-width:900px){
-      nav{padding:0 20px}.nav-links{display:none}
-      .hero{grid-template-columns:1fr}.hero-text{padding:60px 24px}.hero-visual{display:none}
-      .search-section{padding:24px 20px}.search-bar{flex-direction:column}
-      .search-field{border-right:none;border-bottom:1px solid var(--border);width:100%}
-      .locations-section,.ai-section,.why-section{padding:60px 24px}
-      .locations-header{flex-direction:column;align-items:flex-start;gap:20px}
-      .properties-grid{grid-template-columns:1fr}.property-card.featured{grid-column:span 1}
-      .prop-feature{grid-template-columns:1fr}
-      .feat-gallery{min-height:280px}.feat-content{padding:32px 24px}
-      .why-section,.ai-section{grid-template-columns:1fr;gap:40px}
-      .ical-section{padding:40px 24px;flex-direction:column}
-      footer{padding:40px 24px}.footer-top{grid-template-columns:1fr;gap:28px}
-      .modal-gallery{grid-template-columns:1fr;height:240px}.modal-thumbs{display:none}
-      .modal-amenities{grid-template-columns:repeat(2,1fr)}.modal-body{padding:24px}
-    }
-  </style>
-</head>
-<body>
+ChaseStays
+LONDON & BIRMINGHAM · BOOK DIRECT & SAVE
+Your home in the heart of the city
+Beautifully furnished serviced apartments in Baker Street and Birmingham city centre. More space, more style — at a fraction of the hotel price.
+VIEW ALL PROPERTIES
+Chat with our AI →
+7
+PROPERTIES
+2
+CITIES
+4.8★
+GUEST RATING
+      All locations
+      Baker Street, London NW1
+      The Rotunda, Birmingham B2
+      The Orion, Birmingham B5
+    
+      1 guest2 guests3 guests4 guests
+    
+CHECK AVAILABILITY
+OUR PORTFOLIO
+Seven properties. Two great cities.
+ALL
+LONDON
+BIRMINGHAM
+🏛
+Gloucester Place
+BAKER STREET · LONDON NW1 6DT
+Gloucester Place — Apartment 1
+Third-floor flat in a charming period conversion in the heart of Marylebone. Cosy reception, open-plan kitchen and private bathroom. Steps from Baker Street tube, Regent’s Park and Madame Tussauds.
+WiFi
+Kitchen
+Washer
+TV
+BOOK →
+💊
+Apartment 2
+BAKER STREET · LONDON NW1
+Gloucester Place — Apartment 2
+Well-appointed apartment in this elegant period building. Ideal for couples or solo travellers seeking a central London base with a genuine home feel.
+WiFi
+Kitchen
+TV
+BOOK →
+💋
+Apartment 3
+BAKER STREET · LONDON NW1
+Gloucester Place — Apartment 3
+Bright and comfortable flat in a sought-after Marylebone address. Spacious enough for families or small groups, with all essentials included.
+WiFi
+Kitchen
+Washer/dryer
+BOOK →
+🏠
+Apartment 4
+BAKER STREET · LONDON NW1
+Gloucester Place — Apartment 4
+Comfortable and well-located within this elegant NW1 building. Easy access to Baker Street, Regent’s Park and Bond Street tube stations.
+WiFi
+Kitchen
+TV
+BOOK →
+✨
+Apartment 7
+BAKER STREET · LONDON NW1
+Gloucester Place — Apartment 7
+A bright flat on one of London’s most iconic streets. Steps from the Sherlock Holmes Museum, The Wallace Collection, and Baker Street tube.
+WiFi
+Kitchen
+TV
+BOOK →
+‹ ›
+NEW STREET · BIRMINGHAM B2 4PG
+The Rotunda
+A 1,000 sq ft penthouse in Birmingham’s most iconic building. Open-plan living with kitchen island, two double bedrooms, two modern bathrooms and stunning city views from the curved glass facade.
+WiFi
+Kitchen island
+2 beds
+City views
+Bullring 100m
+BOOK →
+‹ ›
+NAVIGATION STREET · BIRMINGHAM B5
+The Orion
+A beautifully styled apartment in The Orion — stunning city views, designer kitchen, two striking bedrooms and luxurious marble bathrooms. Minutes from New Street station.
+WiFi
+Designer kitchen
+City views
+New Street 5 min
+BOOK →
+‹ ›
+FEATURED PROPERTY · BIRMINGHAM CITY CENTRE
+The Rotunda, The Rotunda
+A 1,000 sq ft penthouse in Birmingham’s most iconic landmark on New Street. Open-plan living with kitchen island, two generously sized double bedrooms with upholstered headboards, a modern en-suite shower room and a family bathroom with bath. The building’s curved glass facade puts you steps from the Bullring, Grand Central and Birmingham New Street station.
+▲
+Iconic location
+Steps from Bullring & New Street station
+🍳
+Kitchen island
+Fully equipped, open-plan living
+🏍
+Two double bedrooms
+Comfortable upholstered beds
+🛀
+Two bathrooms
+En-suite shower + family bath
+📶
+High-speed WiFi
+Ideal for remote working
+🏠
+1,000 sq ft
+Spacious penthouse-level flat
+BOOK THE ROTUNDA
+FEATURED PROPERTY · BIRMINGHAM CITY CENTRE
+The Orion, The Orion
+A spectacularly styled apartment in The Orion on Navigation Street. The open-plan living space features a glossy designer kitchen, a vast corner sofa lounge with floor-to-ceiling city views, two striking bedrooms with feature wallpaper and designer headboards, and two stunning marble bathrooms — one with a full bath, bidet, twin sinks and bathroom TV. A truly premium Birmingham stay.
+🏙
+Panoramic city views
+Floor-to-ceiling corner windows
+📸
+Designer kitchen
+Island, Nespresso & full appliances
+🏭
+Two marble bathrooms
+Bath, bidet & bathroom TV
+🎶
+Premium AV system
+Surround sound throughout
+🏠
+Navigation Street
+New Street & Mailbox nearby
+★
+Luxury finish
+Designer furniture & décor throughout
+BOOK THE ORION
+‹ ›
+WHY BOOK DIRECT
+Skip the platform fees
+Booking directly with us means you pay less, get more flexibility, and speak to real people — not algorithms. Our calendars stay in sync with Airbnb automatically via iCal.
+BOOK DIRECTLY →
+01
+Best price guaranteed
+No Airbnb service fees added on top. What you see is what you pay.
+02
+Flexible terms
+Speak directly to us for changes, early check-in, extended stays and special requests.
+03
+Live calendar sync via iCal
+Availability syncs automatically with Airbnb — no double bookings, ever.
+04
+Direct host communication
+You deal with us, not a platform. We respond quickly and take care of everything.
+AI BOOKING ASSISTANT
+Let our AI find your perfect property
+Describe your dates, group size or preferences — our assistant knows all seven properties and will help you find the right match instantly.
+✓
+Available 24/7
+✓
+Knows all 7 properties
+✓
+Instant answers
+✦
+Chase Stays Assistant
+Powered by AI · Always on
 
-<nav>
-  <a href="/" class="nav-logo">Chase<span>Stays</span></a>
-  <ul class="nav-links">
-    <li><a href="#properties">Properties</a></li>
-    <li><a href="#rotunda">The Rotunda</a></li>
-    <li><a href="#orion">The Orion</a></li>
-    <li><a href="#assistant">AI Assistant</a></li>
-    <li><a href="#contact" class="nav-cta">Book Direct</a></li>
-  </ul>
-</nav>
+Hello! I can help you find the perfect short stay in London or Birmingham. What dates are you thinking, and how many guests?
+Baker Street this weekend
+Tell me about The Rotunda
+Tell me about The Orion
+Best value for 2 guests?
 
-<section class="hero">
-  <div class="hero-text">
-    <p class="hero-eyebrow">London &amp; Birmingham &middot; Book Direct &amp; Save</p>
-    <h1 class="hero-headline">Your home<br>in the<br><em>heart of the city</em></h1>
-    <p class="hero-sub">Beautifully furnished serviced apartments in Baker Street and Birmingham city centre. More space, more style &mdash; at a fraction of the hotel price.</p>
-    <div class="hero-actions">
-      <a href="#properties" class="btn-primary">View all properties</a>
-      <a href="#assistant" class="btn-ghost">Chat with our AI &rarr;</a>
-    </div>
-    <div class="hero-stats">
-      <div><div class="hero-stat-num">7</div><div class="hero-stat-label">Properties</div></div>
-      <div><div class="hero-stat-num">2</div><div class="hero-stat-label">Cities</div></div>
-      <div><div class="hero-stat-num">4.8&#9733;</div><div class="hero-stat-label">Guest Rating</div></div>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <img id="heroImg" class="hero-img" src="" alt="The Rotunda Birmingham &mdash; Chase Stays" />
-    <div class="hero-img-overlay">
-      <div class="hero-pin-cards">
-        <div class="location-pin-card"><div class="pin-dot london"></div><div><div class="pin-name">Gloucester Place, London</div><div class="pin-detail">Baker Street &middot; Marylebone &middot; NW1 6DT</div></div><div class="pin-count">5 flats</div></div>
-        <div class="location-pin-card"><div class="pin-dot birmingham"></div><div><div class="pin-name">The Rotunda, Birmingham</div><div class="pin-detail">150 New Street &middot; B2 4PG</div></div><div class="pin-count">The Rotunda</div></div>
-        <div class="location-pin-card"><div class="pin-dot birmingham"></div><div><div class="pin-name">The Orion, Birmingham</div><div class="pin-detail">90 Navigation Street &middot; B5 4AF</div></div><div class="pin-count">The Orion</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="search-section">
-  <form class="search-bar" onsubmit="return false">
-    <select class="search-field" aria-label="Location">
-      <option value="">All locations</option>
-      <option>Baker Street, London NW1</option>
-      <option>The Rotunda, Birmingham B2</option>
-      <option>The Orion, Birmingham B5</option>
-    </select>
-    <input class="search-field" type="date" aria-label="Check in" />
-    <input class="search-field" type="date" aria-label="Check out" />
-    <select class="search-field" aria-label="Guests">
-      <option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option>
-    </select>
-    <button type="submit" class="search-btn">Check availability</button>
-  </form>
-</section>
-
-<section class="locations-section" id="properties">
-  <div class="locations-header">
-    <div><p class="section-label">Our Portfolio</p><h2 class="section-title">Seven properties.<br>Two great cities.</h2></div>
-    <div class="location-tabs">
-      <button class="tab-btn active" onclick="filterProps(this,'all')">All</button>
-      <button class="tab-btn" onclick="filterProps(this,'london')">London</button>
-      <button class="tab-btn" onclick="filterProps(this,'birmingham')">Birmingham</button>
-    </div>
-  </div>
-  <div class="properties-grid" id="propertiesGrid">
-
-    <article class="property-card featured" data-city="london" onclick="openModal('flat1')">
-      <div class="card-gallery"><div class="gallery-slides" id="gal-flat1"><div class="gallery-slide ph slide-h-lg"><div style="font-size:40px;opacity:.25">&#127963;</div><div style="font-family:var(--display);font-size:14px;color:var(--muted)">Gloucester Place</div></div></div></div>
-      <div class="card-body">
-        <p class="card-location">Baker Street &middot; London NW1 6DT</p>
-        <h3 class="card-name">Gloucester Place — Apartment 1</h3>
-        <p class="card-desc">Third-floor flat in a charming period conversion in the heart of Marylebone. Cosy reception, open-plan kitchen and private bathroom. Steps from Baker Street tube, Regent&rsquo;s Park and Madame Tussauds.</p>
-        <div class="card-meta"><div class="card-badges"><span class="badge">WiFi</span><span class="badge">Kitchen</span><span class="badge">Washer</span><span class="badge">TV</span></div><a href="#contact" class="card-book" onclick="event.stopPropagation()">Book &rarr;</a></div>
-      </div>
-    </article>
-
-    <article class="property-card" data-city="london" onclick="openModal('flat2')">
-      <div class="card-gallery"><div class="gallery-slides" id="gal-flat2"><div class="gallery-slide ph slide-h"><div style="font-size:34px;opacity:.25">&#128138;</div><div style="font-family:var(--display);font-size:13px;color:var(--muted)">Apartment 2</div></div></div></div>
-      <div class="card-body"><p class="card-location">Baker Street &middot; London NW1</p><h3 class="card-name">Gloucester Place — Apartment 2</h3><p class="card-desc">Well-appointed apartment in this elegant period building. Ideal for couples or solo travellers seeking a central London base with a genuine home feel.</p><div class="card-meta"><div class="card-badges"><span class="badge">WiFi</span><span class="badge">Kitchen</span><span class="badge">TV</span></div><a href="#contact" class="card-book" onclick="event.stopPropagation()">Book &rarr;</a></div></div>
-    </article>
-
-    <article class="property-card" data-city="london" onclick="openModal('flat3')">
-      <div class="card-gallery"><div class="gallery-slides" id="gal-flat3"><div class="gallery-slide ph slide-h"><div style="font-size:34px;opacity:.25">&#128139;</div><div style="font-family:var(--display);font-size:13px;color:var(--muted)">Apartment 3</div></div></div></div>
-      <div class="card-body"><p class="card-location">Baker Street &middot; London NW1</p><h3 class="card-name">Gloucester Place — Apartment 3</h3><p class="card-desc">Bright and comfortable flat in a sought-after Marylebone address. Spacious enough for families or small groups, with all essentials included.</p><div class="card-meta"><div class="card-badges"><span class="badge">WiFi</span><span class="badge">Kitchen</span><span class="badge">Washer/dryer</span></div><a href="#contact" class="card-book" onclick="event.stopPropagation()">Book &rarr;</a></div></div>
-    </article>
-
-    <article class="property-card" data-city="london" onclick="openModal('flat4')">
-      <div class="card-gallery"><div class="gallery-slides" id="gal-flat4"><div class="gallery-slide ph slide-h"><div style="font-size:34px;opacity:.25">&#127968;</div><div style="font-family:var(--display);font-size:13px;color:var(--muted)">Apartment 4</div></div></div></div>
-      <div class="card-body"><p class="card-location">Baker Street &middot; London NW1</p><h3 class="card-name">Gloucester Place — Apartment 4</h3><p class="card-desc">Comfortable and well-located within this elegant NW1 building. Easy access to Baker Street, Regent&rsquo;s Park and Bond Street tube stations.</p><div class="card-meta"><div class="card-badges"><span class="badge">WiFi</span><span class="badge">Kitchen</span><span class="badge">TV</span></div><a href="#contact" class="card-book" onclick="event.stopPropagation()">Book &rarr;</a></div></div>
-    </article>
-
-    <article class="property-card" data-city="london" onclick="openModal('flat7')">
-      <div class="card-gallery"><div class="gallery-slides" id="gal-flat7"><div class="gallery-slide ph slide-h"><div style="font-size:34px;opacity:.25">&#10024;</div><div style="font-family:var(--display);font-size:13px;color:var(--muted)">Apartment 7</div></div></div></div>
-      <div class="card-body"><p class="card-location">Baker Street &middot; London NW1</p><h3 class="card-name">Gloucester Place — Apartment 7</h3><p class="card-desc">A bright flat on one of London&rsquo;s most iconic streets. Steps from the Sherlock Holmes Museum, The Wallace Collection, and Baker Street tube.</p><div class="card-meta"><div class="card-badges"><span class="badge">WiFi</span><span class="badge">Kitchen</span><span class="badge">TV</span></div><a href="#contact" class="card-book" onclick="event.stopPropagation()">Book &rarr;</a></div></div>
-    </article>
-
-    <article class="property-card featured" data-city="birmingham" onclick="openModal('rotunda')">
-      <div class="card-gallery">
-        <div class="gallery-slides" id="gal-rotunda"><!-- JS builds --></div>
-        <button class="g-prev" onclick="event.stopPropagation();cardSlide('rotunda',-1)" aria-label="Previous">&#8249;</button>
-        <button class="g-next" onclick="event.stopPropagation();cardSlide('rotunda',1)" aria-label="Next">&#8250;</button>
-        <div class="g-dots" id="dots-rotunda"></div>
-      </div>
-      <div class="card-body">
-        <p class="card-location">New Street &middot; Birmingham B2 4PG</p>
-        <h3 class="card-name">The Rotunda</h3>
-        <p class="card-desc">A 1,000 sq ft penthouse in Birmingham&rsquo;s most iconic building. Open-plan living with kitchen island, two double bedrooms, two modern bathrooms and stunning city views from the curved glass facade.</p>
-        <div class="card-meta"><div class="card-badges"><span class="badge">WiFi</span><span class="badge">Kitchen island</span><span class="badge">2 beds</span><span class="badge">City views</span><span class="badge">Bullring 100m</span></div><a href="#contact" class="card-book" onclick="event.stopPropagation()">Book &rarr;</a></div>
-      </div>
-    </article>
-
-    <article class="property-card" data-city="birmingham" onclick="openModal('orion')">
-      <div class="card-gallery">
-        <div class="gallery-slides" id="gal-orion"><!-- JS builds --></div>
-        <button class="g-prev" onclick="event.stopPropagation();cardSlide('orion',-1)" aria-label="Previous">&#8249;</button>
-        <button class="g-next" onclick="event.stopPropagation();cardSlide('orion',1)" aria-label="Next">&#8250;</button>
-        <div class="g-dots" id="dots-orion"></div>
-      </div>
-      <div class="card-body">
-        <p class="card-location">Navigation Street &middot; Birmingham B5</p>
-        <h3 class="card-name">The Orion</h3>
-        <p class="card-desc">A beautifully styled apartment in The Orion &mdash; stunning city views, designer kitchen, two striking bedrooms and luxurious marble bathrooms. Minutes from New Street station.</p>
-        <div class="card-meta"><div class="card-badges"><span class="badge">WiFi</span><span class="badge">Designer kitchen</span><span class="badge">City views</span><span class="badge">New Street 5 min</span></div><a href="#contact" class="card-book" onclick="event.stopPropagation()">Book &rarr;</a></div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- ROTUNDA FEATURE -->
-<section class="prop-feature rotunda-section" id="rotunda">
-  <div class="feat-gallery">
-    <div class="feat-slides" id="feat-rotunda-slides"><!-- JS --></div>
-    <button class="feat-prev" onclick="featSlide('rotunda',-1)">&#8249;</button>
-    <button class="feat-next" onclick="featSlide('rotunda',1)">&#8250;</button>
-    <div class="feat-nav" id="feat-rotunda-dots"></div>
-  </div>
-  <div class="feat-content">
-    <p class="feat-eyebrow">Featured Property &middot; Birmingham City Centre</p>
-    <h2 class="feat-title">The Rotunda,<br><em>The Rotunda</em></h2>
-    <p class="feat-desc">A 1,000 sq ft penthouse in Birmingham&rsquo;s most iconic landmark on New Street. Open-plan living with kitchen island, two generously sized double bedrooms with upholstered headboards, a modern en-suite shower room and a family bathroom with bath. The building&rsquo;s curved glass facade puts you steps from the Bullring, Grand Central and Birmingham New Street station.</p>
-    <div class="feat-grid">
-      <div class="feat-item"><span class="feat-icon">&#9650;</span><div class="feat-text"><strong>Iconic location</strong><span>Steps from Bullring &amp; New Street station</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#127859;</span><div class="feat-text"><strong>Kitchen island</strong><span>Fully equipped, open-plan living</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#127949;</span><div class="feat-text"><strong>Two double bedrooms</strong><span>Comfortable upholstered beds</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#128704;</span><div class="feat-text"><strong>Two bathrooms</strong><span>En-suite shower + family bath</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#128246;</span><div class="feat-text"><strong>High-speed WiFi</strong><span>Ideal for remote working</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#127968;</span><div class="feat-text"><strong>1,000 sq ft</strong><span>Spacious penthouse-level flat</span></div></div>
-    </div>
-    <a href="#contact" class="btn-primary">Book The Rotunda</a>
-  </div>
-</section>
-
-<!-- ORION FEATURE -->
-<section class="prop-feature orion-section" id="orion">
-  <div class="feat-content" style="order:-1">
-    <p class="feat-eyebrow" style="color:var(--gold)">Featured Property &middot; Birmingham City Centre</p>
-    <h2 class="feat-title" style="color:var(--deep)">The Orion,<br><em>The Orion</em></h2>
-    <p class="feat-desc" style="color:var(--muted)">A spectacularly styled apartment in The Orion on Navigation Street. The open-plan living space features a glossy designer kitchen, a vast corner sofa lounge with floor-to-ceiling city views, two striking bedrooms with feature wallpaper and designer headboards, and two stunning marble bathrooms &mdash; one with a full bath, bidet, twin sinks and bathroom TV. A truly premium Birmingham stay.</p>
-    <div class="feat-grid">
-      <div class="feat-item"><span class="feat-icon">&#127961;</span><div class="feat-text"><strong style="color:var(--deep)">Panoramic city views</strong><span>Floor-to-ceiling corner windows</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#128248;</span><div class="feat-text"><strong style="color:var(--deep)">Designer kitchen</strong><span>Island, Nespresso &amp; full appliances</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#127981;</span><div class="feat-text"><strong style="color:var(--deep)">Two marble bathrooms</strong><span>Bath, bidet &amp; bathroom TV</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#127926;</span><div class="feat-text"><strong style="color:var(--deep)">Premium AV system</strong><span>Surround sound throughout</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#127968;</span><div class="feat-text"><strong style="color:var(--deep)">Navigation Street</strong><span>New Street &amp; Mailbox nearby</span></div></div>
-      <div class="feat-item"><span class="feat-icon">&#9733;</span><div class="feat-text"><strong style="color:var(--deep)">Luxury finish</strong><span>Designer furniture &amp; d&eacute;cor throughout</span></div></div>
-    </div>
-    <a href="#contact" class="btn-primary">Book The Orion</a>
-  </div>
-  <div class="feat-gallery">
-    <div class="feat-slides" id="feat-orion-slides"><!-- JS --></div>
-    <button class="feat-prev" onclick="featSlide('orion',-1)">&#8249;</button>
-    <button class="feat-next" onclick="featSlide('orion',1)">&#8250;</button>
-    <div class="feat-nav" id="feat-orion-dots"></div>
-  </div>
-</section>
-
-<!-- WHY BOOK DIRECT -->
-<section class="why-section">
-  <div>
-    <p class="section-label" style="color:var(--gold)">Why book direct</p>
-    <h2 class="why-title">Skip the<br><em>platform fees</em></h2>
-    <p class="why-sub">Booking directly with us means you pay less, get more flexibility, and speak to real people &mdash; not algorithms. Our calendars stay in sync with Airbnb automatically via iCal.</p>
-    <a href="#contact" class="btn-primary">Book directly &rarr;</a>
-  </div>
-  <div class="why-benefits">
-    <div class="benefit"><div class="benefit-num">01</div><div><div class="benefit-title">Best price guaranteed</div><div class="benefit-desc">No Airbnb service fees added on top. What you see is what you pay.</div></div></div>
-    <div class="benefit"><div class="benefit-num">02</div><div><div class="benefit-title">Flexible terms</div><div class="benefit-desc">Speak directly to us for changes, early check-in, extended stays and special requests.</div></div></div>
-    <div class="benefit"><div class="benefit-num">03</div><div><div class="benefit-title">Live calendar sync via iCal</div><div class="benefit-desc">Availability syncs automatically with Airbnb &mdash; no double bookings, ever.</div></div></div>
-    <div class="benefit"><div class="benefit-num">04</div><div><div class="benefit-title">Direct host communication</div><div class="benefit-desc">You deal with us, not a platform. We respond quickly and take care of everything.</div></div></div>
-  </div>
-</section>
-
-<!-- AI ASSISTANT -->
-<section class="ai-section" id="assistant">
-  <div>
-    <p class="section-label">AI Booking Assistant</p>
-    <h2 class="section-title">Let our AI find<br>your perfect<br>property</h2>
-    <p style="font-size:14px;color:var(--muted);margin-top:16px;line-height:1.7;margin-bottom:28px">Describe your dates, group size or preferences &mdash; our assistant knows all seven properties and will help you find the right match instantly.</p>
-    <div style="display:flex;gap:20px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)"><span style="color:var(--gold)">&#10003;</span> Available 24/7</div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)"><span style="color:var(--gold)">&#10003;</span> Knows all 7 properties</div>
-      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)"><span style="color:var(--gold)">&#10003;</span> Instant answers</div>
-    </div>
-  </div>
-  <div class="ai-chat-window">
-    <div class="ai-chat-header">
-      <div class="ai-avatar">&#10022;</div>
-      <div><div class="ai-name">Chase Stays Assistant</div><div class="ai-status">Powered by AI &middot; Always on</div></div>
-      <div class="ai-online"></div>
-    </div>
-    <div class="ai-messages" id="aiMessages">
-      <div class="msg msg-ai">Hello! I can help you find the perfect short stay in London or Birmingham. What dates are you thinking, and how many guests?</div>
-    </div>
-    <div class="ai-chips">
-      <button class="ai-chip" onclick="sendChip(this)">Baker Street this weekend</button>
-      <button class="ai-chip" onclick="sendChip(this)">Tell me about The Rotunda</button>
-      <button class="ai-chip" onclick="sendChip(this)">Tell me about The Orion</button>
-      <button class="ai-chip" onclick="sendChip(this)">Best value for 2 guests?</button>
-    </div>
-    <div class="ai-input-row">
-      <input class="ai-input" id="aiInput" type="text" placeholder="Ask about availability, location, amenities&hellip;" onkeydown="if(event.key==='Enter')sendMessage()" />
-      <button class="ai-send" onclick="sendMessage()" aria-label="Send">&rarr;</button>
-    </div>
-  </div>
-</section>
-
-<!-- BOOK DIRECT BANNER -->
-<section style="background:var(--gold);padding:28px 80px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;">
-  <div style="display:flex;align-items:center;gap:20px;">
-    <div style="font-size:28px;">💰</div>
-    <div>
-      <div style="font-family:var(--display);font-size:22px;font-weight:500;color:var(--deep);">Book direct and save up to 15%</div>
-      <div style="font-size:13px;color:rgba(26,26,24,.7);margin-top:3px;">No Airbnb service fees. Same properties, better price. Guaranteed.</div>
-    </div>
-  </div>
-  <a href="#enquiry" style="background:var(--deep);color:var(--cream);padding:14px 28px;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;border-radius:2px;text-decoration:none;white-space:nowrap;transition:opacity .2s;">Enquire now</a>
-</section>
-
-<!-- ENQUIRY FORM -->
-<section id="enquiry" style="padding:100px 80px;background:var(--cream);">
-  <div style="max-width:700px;margin:0 auto;">
-    <p class="section-label">Direct booking</p>
-    <h2 class="section-title" style="margin-bottom:12px;">Enquire about a property</h2>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:40px;line-height:1.7;">Fill in your details below and we'll get back to you within a few hours with availability and our best direct rate — no platform fees added.</p>
-
-    <form id="enquiryForm" onsubmit="submitEnquiry(event)" style="display:flex;flex-direction:column;gap:20px;">
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-        <div>
-          <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Your name *</label>
-          <input type="text" id="fname" required placeholder="Full name" style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
-        </div>
-        <div>
-          <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Email address *</label>
-          <input type="email" id="femail" required placeholder="your@email.com" style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
-        </div>
-      </div>
-
-      <div>
-        <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Phone number</label>
-        <input type="tel" id="fphone" placeholder="+44 7700 000000" style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
-      </div>
-
-      <div>
-        <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Property of interest *</label>
-        <select id="fproperty" required style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-          <option value="">Select a property…</option>
-          <optgroup label="London — Gloucester Place, NW1">
-            <option>Gloucester Place — Apartment 1</option>
-            <option>Gloucester Place — Apartment 2</option>
-            <option>Gloucester Place — Apartment 3</option>
-            <option>Gloucester Place — Apartment 4</option>
-            <option>Gloucester Place — Apartment 7</option>
-          </optgroup>
-          <optgroup label="Birmingham">
-            <option>The Rotunda — New Street, B2</option>
-            <option>The Orion — Navigation Street, B5</option>
-          </optgroup>
-          <option>Not sure — help me choose</option>
-        </select>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
-        <div>
-          <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Check in *</label>
-          <input type="date" id="fcheckin" required style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
-        </div>
-        <div>
-          <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Check out *</label>
-          <input type="date" id="fcheckout" required style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
-        </div>
-      </div>
-
-      <div>
-        <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Number of guests</label>
-        <select id="fguests" style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;appearance:none;cursor:pointer;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
-          <option>1 guest</option>
-          <option>2 guests</option>
-          <option>3 guests</option>
-          <option>4 guests</option>
-          <option>5+ guests</option>
-        </select>
-      </div>
-
-      <div>
-        <label style="font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:8px;">Message</label>
-        <textarea id="fmessage" rows="4" placeholder="Any questions, special requests or additional information…" style="width:100%;padding:14px 16px;border:1px solid var(--border);border-radius:2px;font-family:var(--body);font-size:14px;color:var(--deep);background:white;outline:none;resize:vertical;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></textarea>
-      </div>
-
-      <div id="formMsg" style="display:none;padding:14px 16px;border-radius:2px;font-size:14px;"></div>
-
-      <button type="submit" id="fsubmit" style="background:var(--deep);color:var(--cream);padding:16px 32px;font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:2px;cursor:pointer;transition:background .2s;align-self:flex-start;">Send enquiry</button>
-
-      <p style="font-size:12px;color:var(--muted);line-height:1.6;">We typically respond within a few hours. Your details will only be used to respond to your enquiry.</p>
-    </form>
-  </div>
-</section>
-
-<section class="ical-section">
-  <div class="ical-icon">&#128197;</div>
-  <div>
-    <h3 class="ical-title">Live calendar sync with Airbnb</h3>
-    <p class="ical-desc">Our availability calendars sync automatically with Airbnb via iCal. When a property is booked on Airbnb, it&rsquo;s instantly blocked here too &mdash; and vice versa. No double bookings, no manual updates.</p>
-  </div>
-  <a href="#contact" class="btn-primary" style="margin-left:auto;white-space:nowrap">Check availability</a>
-</section>
-
-<footer id="contact">
-  <div class="footer-top">
-    <div>
-      <div class="footer-logo">Chase<span>Stays</span></div>
-      <p class="footer-tagline">Premium short-stay serviced apartments in Baker Street, London and Birmingham city centre. Book direct for the best rate &mdash; no platform fees.</p>
-      <p style="font-size:13px;color:var(--gold)">hello@chasestay.com</p>
-    </div>
-    <div>
-      <div class="footer-heading">London</div>
-      <ul class="footer-links">
-        <li><a href="#properties">Gloucester Place — Apartment 1</a></li>
-        <li><a href="#properties">Gloucester Place — Apartment 2</a></li>
-        <li><a href="#properties">Gloucester Place — Apartment 3</a></li>
-        <li><a href="#properties">Gloucester Place — Apartment 4</a></li>
-        <li><a href="#properties">Gloucester Place — Apartment 7</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-heading">Birmingham</div>
-      <ul class="footer-links">
-        <li><a href="#rotunda">The Rotunda &mdash; The Rotunda</a></li>
-        <li><a href="#orion">The Orion &mdash; The Orion</a></li>
-      </ul>
-      <div class="footer-heading" style="margin-top:24px">Info</div>
-      <ul class="footer-links">
-        <li><a href="#">Book direct &amp; save</a></li>
-        <li><a href="#">iCal availability sync</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 Chase Stays. All rights reserved.</span>
-    <span>Short-stay apartments &middot; London &amp; Birmingham</span>
-  </div>
-  <p class="footer-seo">Short term rentals Baker Street London NW1 &middot; Serviced apartments Gloucester Place Marylebone &middot; Short stay Birmingham city centre &middot; The Rotunda Birmingham B2 4PG &middot; The Orion Navigation Street Birmingham B5 &middot; Direct booking serviced apartments London &middot; Furnished flats Baker Street weekly monthly</p>
-</footer>
-
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" id="modalBox">
-    <button class="modal-close" onclick="closeModal()">&#10005;</button>
-    <div id="modalInner"></div>
-  </div>
-</div>
-
-<script>
-const IMGS = {
-  'rotunda-exterior': 'rotunda-exterior.jpg',
-  'rotunda-living':   'rotunda-living.jpg',
-  'rotunda-bedroom1': 'rotunda-bedroom1.jpg',
-  'rotunda-bedroom2': 'rotunda-bedroom2.jpg',
-  'rotunda-bathroom': 'rotunda-bathroom.jpg',
-  'orion-kitchen':    'orion-kitchen.jpg',
-  'orion-living':     'orion-living.jpg',
-  'orion-kitchen2':   'orion-kitchen2.jpg',
-  'orion-lounge':     'orion-lounge.jpg',
-  'orion-bedroom1':   'orion-bedroom1.jpg',
-  'orion-bathroom1':  'orion-bathroom1.jpg',
-  'orion-bedroom2':   'orion-bedroom2.jpg',
-  'orion-bedroom3':   'orion-bedroom3.jpg',
-  'orion-bathroom2':  'orion-bathroom2.jpg',
-}
-
-// ── IMAGE SETS ──
-const rotundaImgs = [
-  {src:IMGS['rotunda-exterior'], alt:'The Rotunda building on New Street, Birmingham'},
-  {src:IMGS['rotunda-living'],   alt:'Open-plan living room and kitchen island'},
-  {src:IMGS['rotunda-bedroom1'], alt:'Double bedroom with upholstered headboard'},
-  {src:IMGS['rotunda-bedroom2'], alt:'Second double bedroom'},
-  {src:IMGS['rotunda-bathroom'], alt:'Modern en-suite bathroom with shower and bath'},
-];
-
-const orionImgs = [
-  {src:IMGS['orion-living'],    alt:'Open-plan living and dining with panoramic Birmingham skyline views'},
-  {src:IMGS['orion-kitchen'],   alt:'Designer glossy white kitchen with island and bar stools'},
-  {src:IMGS['orion-lounge'],    alt:'Corner sofa lounge with floor-to-ceiling city views'},
-  {src:IMGS['orion-kitchen2'],  alt:'Full kitchen with pendant lighting'},
-  {src:IMGS['orion-bedroom1'],  alt:'Striking bedroom with leather headboard and striped wallpaper'},
-  {src:IMGS['orion-bathroom1'], alt:'Marble bathroom with gold stripe wallpaper'},
-  {src:IMGS['orion-bedroom2'],  alt:'Master bedroom with dark wood fitted wardrobes'},
-  {src:IMGS['orion-bathroom2'], alt:'Full marble bathroom with bath, bidet and twin sinks'},
-];
-
-// Set hero image
-document.getElementById('heroImg').src = IMGS['rotunda-exterior'];
-
-// ── BUILD CARD GALLERIES ──
-const cardGalleries = {
-  rotunda: {imgs: rotundaImgs, idx: 0, height: 'slide-h-lg'},
-  orion:   {imgs: orionImgs,   idx: 0, height: 'slide-h'},
-};
-
-function buildCardGallery(id) {
-  const cfg = cardGalleries[id];
-  const slidesEl = document.getElementById('gal-' + id);
-  const dotsEl   = document.getElementById('dots-' + id);
-  slidesEl.innerHTML = cfg.imgs.map((img,i) =>
-    `<div class="gallery-slide ${cfg.height}"><img src="${img.src}" alt="${img.alt}" loading="${i===0?'eager':'lazy'}"></div>`
-  ).join('');
-  dotsEl.innerHTML = cfg.imgs.map((_,i) =>
-    `<button class="g-dot${i===0?' active':''}" onclick="event.stopPropagation();goCard('${id}',${i})" aria-label="Photo ${i+1}"></button>`
-  ).join('');
-}
-
-function cardSlide(id, dir) {
-  const cfg = cardGalleries[id];
-  cfg.idx = (cfg.idx + dir + cfg.imgs.length) % cfg.imgs.length;
-  updateCardGallery(id);
-}
-
-function goCard(id, i) { cardGalleries[id].idx = i; updateCardGallery(id); }
-
-function updateCardGallery(id) {
-  const cfg = cardGalleries[id];
-  document.getElementById('gal-' + id).style.transform = `translateX(-${cfg.idx*100}%)`;
-  document.querySelectorAll(`#dots-${id} .g-dot`).forEach((d,i) => d.classList.toggle('active', i===cfg.idx));
-}
-
-buildCardGallery('rotunda');
-buildCardGallery('orion');
-
-// ── FEATURED SECTION GALLERIES ──
-const featState = { rotunda: 0, orion: 0 };
-
-function buildFeatGallery(id, imgs) {
-  const slidesEl = document.getElementById(`feat-${id}-slides`);
-  const dotsEl   = document.getElementById(`feat-${id}-dots`);
-  slidesEl.innerHTML = imgs.map((img,i) =>
-    `<div class="feat-slide"><img src="${img.src}" alt="${img.alt}" loading="${i===0?'eager':'lazy'}"></div>`
-  ).join('');
-  dotsEl.innerHTML = imgs.map((_,i) =>
-    `<button class="feat-dot${i===0?' active':''}" onclick="goFeat('${id}',${i})" aria-label="Photo ${i+1}"></button>`
-  ).join('');
-}
-
-function featSlide(id, dir) {
-  const imgs = id === 'rotunda' ? rotundaImgs : orionImgs;
-  featState[id] = (featState[id] + dir + imgs.length) % imgs.length;
-  updateFeat(id);
-}
-
-function goFeat(id, i) { featState[id] = i; updateFeat(id); }
-
-function updateFeat(id) {
-  document.getElementById(`feat-${id}-slides`).style.transform = `translateX(-${featState[id]*100}%)`;
-  document.querySelectorAll(`#feat-${id}-dots .feat-dot`).forEach((d,i) => d.classList.toggle('active', i===featState[id]));
-}
-
-buildFeatGallery('rotunda', rotundaImgs);
-buildFeatGallery('orion', orionImgs);
-
-// ── FILTER ──
-function filterProps(btn, city) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.property-card').forEach(c => {
-    c.style.display = (city==='all' || c.dataset.city===city) ? '' : 'none';
-  });
-}
-
-// ── MODAL DATA ──
-const modalData = {
-  flat1: {title:'Gloucester Place — Apartment 1',location:'Baker Street · London NW1 6DT',desc:'A charming third-floor flat in a period conversion building in the heart of Marylebone. Cosy reception room with open-plan kitchen and dining area, comfortable bedroom and private bathroom. Fully furnished for short stays. Steps from Baker Street tube, Regent's Park, Madame Tussauds and The Wallace Collection.',amenities:['High-speed WiFi','Full kitchen','Washing machine','Flat-screen TV','Bed linen','Private bathroom','Heating','Ironing facilities','Baker Street tube 3 min','Regent's Park 5 min'],imgs:[]},
-  flat2: {title:'Gloucester Place — Apartment 2',location:'Baker Street · London NW1 6DT',desc:'A well-appointed apartment in this elegant period building in the heart of Marylebone. Ideal for couples, solo travellers or those on business visits. Fully furnished with all essentials, walking distance from Baker Street, Regent's Park and the West End.',amenities:['High-speed WiFi','Full kitchen','Flat-screen TV','Bed linen','Private bathroom','Heating','Baker Street tube 3 min'],imgs:[]},
-  flat3: {title:'Gloucester Place — Apartment 3',location:'Baker Street · London NW1 6DT',desc:'A bright and spacious flat in one of Marylebone's most sought-after addresses. Perfect for families, small groups or longer stays. Fully furnished with washer/dryer, full kitchen and all essentials.',amenities:['High-speed WiFi','Full kitchen','Washer/dryer','Flat-screen TV','Bed linen','Private bathroom','Heating','Baker Street tube 3 min'],imgs:[]},
-  flat4: {title:'Gloucester Place — Apartment 4',location:'Baker Street · London NW1 6DT',desc:'A comfortable and well-located flat within this elegant NW1 building. Easy access to Baker Street tube on the Jubilee, Metropolitan and Circle lines, plus Regent's Park and Bond Street.',amenities:['High-speed WiFi','Full kitchen','Flat-screen TV','Bed linen','Private bathroom','Heating','Central London location'],imgs:[]},
-  flat7: {title:'Gloucester Place — Apartment 7',location:'Baker Street · London NW1 6DT',desc:'A bright flat on one of London's most iconic streets, steps from the Sherlock Holmes Museum, The Wallace Collection, Regent's Park and Baker Street tube. A proper London home base rather than a cramped hotel room.',amenities:['High-speed WiFi','Full kitchen','Flat-screen TV','Bed linen','Private bathroom','Heating','Sherlock Holmes Museum nearby'],imgs:[]},
-  rotunda: {title:'The Rotunda',location:'150 New Street · Birmingham B2 4PG',desc:'A 1,000 sq ft penthouse apartment in Birmingham's most iconic building on New Street. The open-plan living space features a sleek kitchen island, comfortable sofa lounge and dining area. Two generously sized double bedrooms with upholstered headboards, an en-suite shower room and a family bathroom with bath. Steps from the Bullring, Grand Central and Birmingham New Street station.',amenities:['High-speed WiFi','Kitchen with island','Washer/dryer','Two bathrooms','En-suite shower','Family bath','Flat-screen TV','Bed linen','Bullring 100m','New Street station 2 min','Air conditioning','Two double bedrooms'],imgs:rotundaImgs},
-  orion: {title:'The Orion',location:'90 Navigation Street · Birmingham B5 4AF',desc:'A spectacularly styled apartment in The Orion on Navigation Street. Floor-to-ceiling panoramic city views, a glossy designer kitchen with island and Nespresso machine, a vast corner sofa lounge, two striking designer bedrooms, and two stunning marble bathrooms — one with a full bath, bidet, twin sinks and bathroom TV. A truly premium Birmingham stay.',amenities:['High-speed WiFi','Designer kitchen with island','Nespresso machine','Washer/dryer','Two marble bathrooms','Bath & bidet','Bathroom TV','Premium AV system','Panoramic city views','New Street 5 min','The Mailbox 5 min','Two double bedrooms'],imgs:orionImgs},
-};
-
-function openModal(id) {
-  const d = modalData[id];
-  if (!d) return;
-  const hasImgs = d.imgs && d.imgs.length;
-  const mainHtml = hasImgs
-    ? `<img src="${d.imgs[0].src}" alt="${d.imgs[0].alt}" style="width:100%;height:100%;object-fit:cover;display:block">`
-    : `<div class="ph" style="height:100%;background:#DDD4C4;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:16px;color:var(--muted)">Photos coming soon</div>`;
-  const thumbs = hasImgs
-    ? d.imgs.slice(1,4).map(img => `<img class="modal-thumb" src="${img.src}" alt="${img.alt}" onclick="swapModalMain(this.src,this.alt)">`).join('')
-    : '';
-  document.getElementById('modalInner').innerHTML = `
-    <div class="modal-gallery">
-      <div class="modal-main" id="modalMainImg">${mainHtml}</div>
-      <div class="modal-thumbs">${thumbs}</div>
-    </div>
-    <div class="modal-body">
-      <p class="modal-location">${d.location}</p>
-      <h2 class="modal-title">${d.title}</h2>
-      <p class="modal-desc">${d.desc}</p>
-      <div class="modal-amenities">${d.amenities.map(a=>`<div class="amenity">${a}</div>`).join('')}</div>
-      <a href="mailto:hello@chasestay.com?subject=Booking enquiry: ${encodeURIComponent(d.title)}" class="modal-cta">Enquire about this property</a>
-    </div>`;
-  document.getElementById('modalOverlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function swapModalMain(src, alt) {
-  document.getElementById('modalMainImg').innerHTML = `<img src="${src}" alt="${alt}" style="width:100%;height:100%;object-fit:cover;display:block">`;
-}
-
-function closeModal(e) {
-  if (!e || e.target===document.getElementById('modalOverlay') || e.target.closest('.modal-close')) {
-    document.getElementById('modalOverlay').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-}
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal({target:document.getElementById('modalOverlay')}); });
-
-// ── ENQUIRY FORM ──
-function submitEnquiry(e) {
-  e.preventDefault();
-  const btn = document.getElementById('fsubmit');
-  const msg = document.getElementById('formMsg');
-  const name = document.getElementById('fname').value;
-  const email = document.getElementById('femail').value;
-  const phone = document.getElementById('fphone').value;
-  const property = document.getElementById('fproperty').value;
-  const checkin = document.getElementById('fcheckin').value;
-  const checkout = document.getElementById('fcheckout').value;
-  const guests = document.getElementById('fguests').value;
-  const message = document.getElementById('fmessage').value;
-
-  const subject = encodeURIComponent(`Booking enquiry — ${property}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Not provided'}\n\nProperty: ${property}\nCheck in: ${checkin}\nCheck out: ${checkout}\nGuests: ${guests}\n\nMessage:\n${message || 'No message'}`
-  );
-
-  btn.textContent = 'Opening email…';
-  btn.style.background = 'var(--gold)';
-  btn.style.color = 'var(--deep)';
-
-  window.location.href = `mailto:hello@chasestay.com?subject=${subject}&body=${body}`;
-
-  setTimeout(() => {
-    msg.style.display = 'block';
-    msg.style.background = '#E1F5EE';
-    msg.style.color = '#085041';
-    msg.style.border = '1px solid #5DCAA5';
-    msg.innerHTML = '✓ Your email client should have opened with your enquiry ready to send. If not, email us directly at <strong>hello@chasestay.com</strong>';
-    btn.textContent = 'Send enquiry';
-    btn.style.background = 'var(--deep)';
-    btn.style.color = 'var(--cream)';
-  }, 1500);
-}
-
-// ── AI CHAT ──
-const aiResponses = {
-  'baker street': "Great choice! We have 5 flats at Gloucester Place, NW1 — all within 3 minutes of Baker Street tube in the heart of Marylebone. You're walking distance from Regent's Park, Madame Tussauds and the West End. Which flat interests you, or shall I check specific dates?",
-  'gloucester': "Gloucester Place is in Marylebone, NW1 — one of London's most desirable neighbourhoods. Baker Street tube is 3 minutes away with direct access to the Jubilee, Metropolitan and Circle lines.",
-  'rotunda': "The Rotunda is our 1,000 sq ft penthouse apartment in Birmingham's most iconic building on New Street. It has two double bedrooms, two bathrooms (including a family bath), an open-plan kitchen with island and the building's famous curved glass views. Steps from the Bullring and New Street station. A fantastic city-centre base!",
-  'orion': "The Orion on Navigation Street is our most luxurious property — stunning floor-to-ceiling panoramic views, a designer kitchen with Nespresso machine, two marble bathrooms including one with a bath, bidet and bathroom TV, and a premium AV system. Truly a wow property. Interested?",
-  'birmingham': "We have two brilliant Birmingham city-centre properties: The Rotunda at The Rotunda — a spacious 1,000 sq ft penthouse with two bedrooms and the iconic curved glass views — and The Orion at The Orion, our most luxurious property with panoramic views and marble bathrooms. What dates work for you?",
-  'price': "Booking directly with us avoids Airbnb's service fees, so you'll always get a better rate here. Email us at hello@chasestay.com with your dates and we'll send our best direct rate.",
-  'default': "Thanks for your message! For availability and pricing please email hello@chasestay.com with your dates, number of guests and preferred location. We'll come back to you quickly with our best direct rate.",
-};
-
-function sendChip(btn) {
-  btn.disabled = true; btn.style.opacity = '.5';
-  addMsg(btn.textContent, 'user');
-  setTimeout(() => {
-    const k = Object.keys(aiResponses).find(k => btn.textContent.toLowerCase().includes(k)) || 'default';
-    addMsg(aiResponses[k], 'ai');
-  }, 600);
-}
-
-function sendMessage() {
-  const inp = document.getElementById('aiInput');
-  const t = inp.value.trim(); if (!t) return;
-  addMsg(t, 'user'); inp.value = '';
-  setTimeout(() => {
-    const k = Object.keys(aiResponses).find(k => t.toLowerCase().includes(k)) || 'default';
-    addMsg(aiResponses[k], 'ai');
-  }, 700);
-}
-
-function addMsg(text, who) {
-  const el = document.getElementById('aiMessages');
-  const d = document.createElement('div');
-  d.className = `msg msg-${who}`; d.textContent = text;
-  el.appendChild(d); el.scrollTop = el.scrollHeight;
-}
-</script>
-</body>
-</html>
+→
+💰
+Book direct and save up to 15%
+No Airbnb service fees. Same properties, better price. Guaranteed.
+ENQUIRE NOW
+DIRECT BOOKING
+Enquire about a property
+Fill in your details below and we'll get back to you within a few hours with availability and our best direct rate — no platform fees added.
+YOUR NAME *
+EMAIL ADDRESS *
+PHONE NUMBER
+PROPERTY OF INTEREST *
+          Select a property…
+          
+            Gloucester Place — Apartment 1
+            Gloucester Place — Apartment 2
+            Gloucester Place — Apartment 3
+            Gloucester Place — Apartment 4
+            Gloucester Place — Apartment 7
+          
+          
+            The Rotunda — New Street, B2
+            The Orion — Navigation Street, B5
+          
+          Not sure — help me choose
+        
+CHECK IN *
+CHECK OUT *
+NUMBER OF GUESTS
+          1 guest
+          2 guests
+          3 guests
+          4 guests
+          5+ guests
+        
+MESSAGE
+SEND ENQUIRY
+We typically respond within a few hours. Your details will only be used to respond to your enquiry.
+📅
+Live calendar sync with Airbnb
+Our availability calendars sync automatically with Airbnb via iCal. When a property is booked on Airbnb, it’s instantly blocked here too — and vice versa. No double bookings, no manual updates.
+CHECK AVAILABILITY
+ChaseStays
+Premium short-stay serviced apartments in Baker Street, London and Birmingham city centre. Book direct for the best rate — no platform fees.
+hello@chasestay.com
+LONDON
+		Gloucester Place — Apartment 1
+		Gloucester Place — Apartment 2
+		Gloucester Place — Apartment 3
+		Gloucester Place — Apartment 4
+		Gloucester Place — Apartment 7
+BIRMINGHAM
+		The Rotunda — The Rotunda
+		The Orion — The Orion
+INFO
+		Book direct & save
+		iCal availability sync
+		FAQs
+© 2026 Chase Stays. All rights reserved.
+Short-stay apartments · London & Birmingham
+Short term rentals Baker Street London NW1 · Serviced apartments Gloucester Place Marylebone · Short stay Birmingham city centre · The Rotunda Birmingham B2 4PG · The Orion Navigation Street Birmingham B5 · Direct booking serviced apartments London · Furnished flats Baker Street weekly monthly

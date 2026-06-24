@@ -10,17 +10,18 @@ export default async function handler(req, res) {
 
   const { property } = req.query;
 
-  // Your Airbnb iCal URLs - add these when you have them
-  // To get your iCal URL from Airbnb:
-  // Go to Airbnb → Manage listing → Availability → Export calendar → Copy link
+  // iCal URLs per property - multiple sources are merged for the same property
   const ICAL_URLS = {
-    'apt1':    process.env.ICAL_APT1    || '',
-    'apt2':    process.env.ICAL_APT2    || '',
-    'apt3':    process.env.ICAL_APT3    || '',
-    'apt4':    process.env.ICAL_APT4    || '',
-    'apt7':    process.env.ICAL_APT7    || '',
-    'rotunda': process.env.ICAL_ROTUNDA || '',
-    'orion':   process.env.ICAL_ORION   || '',
+    'apt1':    [process.env.ICAL_APT1    || ''],
+    'apt2':    [process.env.ICAL_APT2    || ''],
+    'apt3':    [process.env.ICAL_APT3    || ''],
+    'apt4':    [process.env.ICAL_APT4    || ''],
+    'apt7':    [process.env.ICAL_APT7    || ''],
+    'rotunda': [process.env.ICAL_ROTUNDA || ''],
+    'orion':   [
+      process.env.ICAL_ORION    || '',  // Airbnb
+      process.env.ICAL_ORION_YR || '',  // Your.Rentals
+    ],
   };
 
   // If specific property requested, fetch just that one
@@ -31,25 +32,38 @@ export default async function handler(req, res) {
 
   const results = {};
 
-  for (const [key, url] of Object.entries(toFetch)) {
-    if (!url) {
+  for (const [key, urls] of Object.entries(toFetch)) {
+    const validUrls = urls.filter(u => u);
+
+    if (validUrls.length === 0) {
       results[key] = { error: 'No iCal URL configured', blockedDates: [] };
       continue;
     }
 
     try {
-      const response = await fetch(url, {
-        headers: { 'User-Agent': 'Mozilla/5.0 ChasestayCalendar/1.0' },
-        signal: AbortSignal.timeout(8000)
+      // Fetch all sources for this property in parallel
+      const fetches = validUrls.map(url =>
+        fetch(url, {
+          headers: { 'User-Agent': 'Mozilla/5.0 ChasestayCalendar/1.0' },
+          signal: AbortSignal.timeout(8000)
+        }).then(r => r.ok ? r.text() : Promise.resolve(''))
+          .catch(() => '')
+      );
+
+      const icals = await Promise.all(fetches);
+
+      // Parse and merge blocked dates from all sources
+      const allBlocked = icals.flatMap(ical => ical ? parseICal(ical) : []);
+
+      // Deduplicate by start+end
+      const seen = new Set();
+      const blockedDates = allBlocked.filter(b => {
+        const key = `${b.start}|${b.end}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
       });
 
-      if (!response.ok) {
-        results[key] = { error: `Failed to fetch: ${response.status}`, blockedDates: [] };
-        continue;
-      }
-
-      const ical = await response.text();
-      const blockedDates = parseICal(ical);
       results[key] = { blockedDates, lastUpdated: new Date().toISOString() };
 
     } catch (err) {
